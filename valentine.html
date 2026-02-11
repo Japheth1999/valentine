@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Will you be my Valentine?</title>
+
+  <style>
+    body {
+      background-color: #ffd6e8;
+      font-family: "Arial", sans-serif;
+      text-align: center;
+      padding-top: 120px;
+    }
+
+    .card {
+      background: white;
+      padding: 40px;
+      border-radius: 20px;
+      width: 340px;
+      margin: auto;
+      box-shadow: 0 15px 25px rgba(0,0,0,0.2);
+      position: relative;
+    }
+
+    h2 {
+      margin-bottom: 25px;
+    }
+
+    button {
+      padding: 14px 28px;
+      font-size: 18px;
+      border-radius: 30px;
+      border: none;
+      cursor: pointer;
+      margin: 10px;
+    }
+
+    #yes {
+      background-color: #ff4d88;
+      color: white;
+    }
+
+    #no {
+      background-color: #e0e0e0;
+      position: absolute;
+    }
+
+    img {
+      width: 260px;
+      margin-top: 20px;
+      border-radius: 15px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="card" id="card">
+    <h2>💖 Reka Tamas,<br>will you be my Valentine?</h2>
+
+    <button id="yes">Yes 💕</button>
+    <button id="no">No</button>
+  </div>
+
+  <script>
+    const noBtn = document.getElementById("no");
+    const yesBtn = document.getElementById("yes");
+    const card = document.getElementById("card");
+
+    noBtn.addEventListener("mouseover", () => {
+      const x = Math.random() * (window.innerWidth - 120);
+      const y = Math.random() * (window.innerHeight - 120);
+      noBtn.style.left = x + "px";
+      noBtn.style.top = y + "px";
+    });
+
+    yesBtn.addEventListener("click", () => {
+      card.innerHTML = `
+        <h2>YAY!! 🥰🎉</h2>
+        <p>You just made me the happiest person ❤️<br>
+        I can’t wait to spend Valentine’s Day with you.</p>
+
+        <img src="https://media.giphy.com/media/l0MYt5jPR6QX5pnqM/giphy.gif">
+      `;
+    });
+  </script>
+
+</body>
+</html>
