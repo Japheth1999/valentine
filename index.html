@@ -1,88 +1,79 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <title>For Reka</title>
 
 <style>
-body {
-  margin: 0;
-  padding: 0;
-  background: #fbe4ec;
-  font-family: "Georgia", serif;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-}
+  body {
+    margin: 0;
+    padding: 0;
+    background: #fbe4ec;
+    font-family: "Georgia", serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    overflow: hidden; /* for hearts */
+  }
 
-.letter {
-  background: white;
-  padding: 50px;
-  max-width: 600px;
-  border-radius: 15px;
-  box-shadow: 0 20px 40px rgba(0,0,0,0.15);
-  animation: fadeIn 2s ease-in-out;
-}
+  .letter {
+    background: white;
+    padding: 46px 46px 34px;
+    max-width: 680px;
+    width: calc(100% - 40px);
+    border-radius: 16px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+    position: relative;
+    z-index: 2;
+    animation: fadeIn 0.8s ease-in-out;
+  }
 
-h1 {
-  font-weight: normal;
-  margin-bottom: 30px;
-}
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(12px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
 
-p {
-  line-height: 1.8;
-  font-size: 18px;
-  color: #333;
-}
+  h1 {
+    font-weight: normal;
+    margin: 0 0 22px;
+  }
 
-.signature {
-  margin-top: 40px;
-  font-style: italic;
-}
+  #typed {
+    line-height: 1.85;
+    font-size: 18px;
+    color: #333;
+    white-space: pre-wrap;
+  }
 
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(20px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-</style>
-</head>
+  .cursor {
+    display: inline-block;
+    width: 10px;
+    margin-left: 2px;
+    animation: blink 0.9s infinite;
+    color: #333;
+    vertical-align: bottom;
+  }
 
-<body>
+  @keyframes blink {
+    0%, 49% { opacity: 1; }
+    50%, 100% { opacity: 0; }
+  }
 
-<div class="letter">
-  <h1>To Reka Tamas,</h1>
+  .controls {
+    display: flex;
+    gap: 10px;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 18px;
+    flex-wrap: wrap;
+  }
 
-  <p>
-  I don’t always say everything I feel out loud,  
-  but I want you to know how much you mean to me.
-  </p>
-
-  <p>
-  Being with you feels easy, natural, and real.  
-  You bring warmth into my life in ways you probably don’t even realize.
-  </p>
-
-  <p>
-  I love your strength, your kindness, your laugh,  
-  and the way you make ordinary moments feel special.
-  </p>
-
-  <p>
-  I’m grateful that I get to call you mine —  
-  not just on Valentine’s Day, but every day.
-  </p>
-
-  <p>
-  Szeretlek, Reka.  
-  Mindig téged választanálak.
-  </p>
-
-  <div class="signature">
-    Yours, always.<br>
-    – Japheth
-  </div>
-</div>
-
-</body>
-</html>
+  .btn {
+    border: none;
+    border-radius: 999px;
+    padding: 10px 16px;
+    cursor: pointer;
+    font-family: Arial, sans-serif;
+    font-si
