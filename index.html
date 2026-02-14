@@ -1,89 +1,88 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Will you be my Valentine?</title>
+<meta charset="UTF-8">
+<title>For Reka</title>
 
-  <style>
-    body {
-      background-color: #ffd6e8;
-      font-family: "Arial", sans-serif;
-      text-align: center;
-      padding-top: 120px;
-    }
+<style>
+body {
+  margin: 0;
+  padding: 0;
+  background: #fbe4ec;
+  font-family: "Georgia", serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
 
-    .card {
-      background: white;
-      padding: 40px;
-      border-radius: 20px;
-      width: 340px;
-      margin: auto;
-      box-shadow: 0 15px 25px rgba(0,0,0,0.2);
-      position: relative;
-    }
+.letter {
+  background: white;
+  padding: 50px;
+  max-width: 600px;
+  border-radius: 15px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+  animation: fadeIn 2s ease-in-out;
+}
 
-    h2 {
-      margin-bottom: 25px;
-    }
+h1 {
+  font-weight: normal;
+  margin-bottom: 30px;
+}
 
-    button {
-      padding: 14px 28px;
-      font-size: 18px;
-      border-radius: 30px;
-      border: none;
-      cursor: pointer;
-      margin: 10px;
-    }
+p {
+  line-height: 1.8;
+  font-size: 18px;
+  color: #333;
+}
 
-    #yes {
-      background-color: #ff4d88;
-      color: white;
-    }
+.signature {
+  margin-top: 40px;
+  font-style: italic;
+}
 
-    #no {
-      background-color: #e0e0e0;
-      position: absolute;
-    }
-
-    img {
-      width: 260px;
-      margin-top: 20px;
-      border-radius: 15px;
-    }
-  </style>
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+</style>
 </head>
 
 <body>
 
-  <div class="card" id="card">
-    <h2>💖 Reka Tamas,<br>will you be my Valentine?</h2>
+<div class="letter">
+  <h1>To Reka Tamas,</h1>
 
-    <button id="yes">Yes 💕</button>
-    <button id="no">No</button>
+  <p>
+  I don’t always say everything I feel out loud,  
+  but I want you to know how much you mean to me.
+  </p>
+
+  <p>
+  Being with you feels easy, natural, and real.  
+  You bring warmth into my life in ways you probably don’t even realize.
+  </p>
+
+  <p>
+  I love your strength, your kindness, your laugh,  
+  and the way you make ordinary moments feel special.
+  </p>
+
+  <p>
+  I’m grateful that I get to call you mine —  
+  not just on Valentine’s Day, but every day.
+  </p>
+
+  <p>
+  Szeretlek, Reka.  
+  Mindig téged választanálak.
+  </p>
+
+  <div class="signature">
+    Yours, always.<br>
+    – Japheth
   </div>
-
-  <script>
-    const noBtn = document.getElementById("no");
-    const yesBtn = document.getElementById("yes");
-    const card = document.getElementById("card");
-
-    noBtn.addEventListener("mouseover", () => {
-      const x = Math.random() * (window.innerWidth - 120);
-      const y = Math.random() * (window.innerHeight - 120);
-      noBtn.style.left = x + "px";
-      noBtn.style.top = y + "px";
-    });
-
-    yesBtn.addEventListener("click", () => {
-      card.innerHTML = `
-        <h2>YAY!! 🥰🎉</h2>
-        <p>You just made me the happiest person ❤️<br>
-        I can’t wait to spend Valentine’s Day with you.</p>
-
-        <img src="https://media.giphy.com/media/l0MYt5jPR6QX5pnqM/giphy.gif">
-      `;
-    });
-  </script>
+</div>
 
 </body>
 </html>
